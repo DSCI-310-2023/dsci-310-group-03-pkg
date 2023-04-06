@@ -4,7 +4,7 @@ This project and everyone participating in it is governed by our [code of conduc
 
 ### Submitting a Bug Report
 If you notice a bug, or have a feature request, 
-please open up an issue [here](https://github.com/karlie-tr/dsci-310-group-03-package/issues). 
+please open up an issue [here](https://github.com/karlie-tr/dsci-310-group-03-pkg/issues). 
 Explain the problem and include additional details to help us reproduce the problem:
 
 * Use a clear and descriptive title for the issue to identify the bug.
@@ -15,3 +15,11 @@ Explain the problem and include additional details to help us reproduce the prob
 If you'd like to contribute a feature or bug fix, 
 you can fork our repo and submit a pull request. 
 We will review pull requests within 7 days.
+
+### Submitting a Improvement Suggestion
+If you see possible improvements of the package, 
+please open up an issue [here](https://github.com/karlie-tr/dsci-310-group-03-pkg/issues). 
+Explain the suggestion and include additional details:
+
+* Point out which aspect of the package could be improved: function definitions, tests or documentation
+* Provide examples if possible
