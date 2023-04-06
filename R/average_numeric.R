@@ -9,11 +9,11 @@
 #' avg_numeric(iris,Species)
 
 avg_numeric <- function(dataset, class_col) {
-  
+
   if (!is.data.frame(dataset)) {
     stop("dataset` should be a data frame or data frame extension")
   }
-  
+
   if (is.character(dataset$class_col)) {
     new_dataset <- dataset |>
       mutate({{ class_col }} := as.factor({{ class_col }}))

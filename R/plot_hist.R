@@ -23,11 +23,11 @@ plot_hist <- function(data,
                       bins = 20,
                       col = 2,
                       title) {
-  
+
   if (!is.character(title)) {
     stop("`title` should be a string")
   }
-  
+
   # Create a new empty list
   plots <- list()
 
@@ -47,7 +47,7 @@ plot_hist <- function(data,
       numeric_df,
       {{ class_column }}
     )
-    
+
     plots[[i]] <- local({
       i <- i
       histogram <- data |>
@@ -72,17 +72,17 @@ plot_hist <- function(data,
     })
   }
 
- plot_title <- cowplot::ggdraw() + 
-    cowplot::draw_label(title, fontface = 'bold')
- 
+ plot_title <- cowplot::ggdraw() +
+   cowplot::draw_label(title, fontface = "bold")
+
   p <- cowplot::plot_grid(plotlist = plots,
                      ncol = col,
                      labels = "auto",
                      label_size = 10)
 
   # return the arranged plots with labels
-  return(cowplot::plot_grid(plot_title, 
-                            p, 
+  return(cowplot::plot_grid(plot_title,
+                            p,
                             ncol = 1,
                             rel_heights = c(0.25, 1),
                             align = "vh"))

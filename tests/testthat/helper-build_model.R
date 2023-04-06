@@ -6,8 +6,8 @@ vfold <- rsample::vfold_cv(training_set, v = 5, strata = Species)
 gridvals <- tibble::tibble(neighbors = seq(1, 10, 1))
 
 image_recipe <- recipes::recipe(Species ~ ., data = training_set) |>
-  recipes::step_scale(all_predictors()) |>
-  recipes::step_center(all_predictors())
+  recipes::step_scale(recipes::all_predictors()) |>
+  recipes::step_center(recipes::all_predictors())
 
 model_no_k <- build_model(
   training_set,
