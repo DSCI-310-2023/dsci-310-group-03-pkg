@@ -6,16 +6,18 @@
 #' @param class_column the groups that we are going to grouped the variables by
 #' @param bins a number that indicates
 #'             the number of bins in histograms
-#' @param ncol the number of columns when arranging the plots
+#' @param col the number of columns when arranging the plots
 #' @param sep the character that is seperating the column names
 #' @param title a string that indicates the plot title
 #'
 #' @return A histogram of all numeric variables that is
 #'         grouped by the class_Column
 #'
-#' @examples
+#'' @example
 #' plot_hist(iris, Species, title = "Histogram")
 #' plot_hist(iris, Species, binwidth = 0.25, col = 3, title = "Histogram")
+#' @importFrom tidyselect any_of
+#' @export
 
 plot_hist <- function(data,
                       class_column,

@@ -11,7 +11,7 @@
 #' @return a new tidied data frame with appropriate columns type
 #'
 #'
-#' @example
+#''@examples
 #'  load_data("data/raw/heart_disease_data.csv",
 #'             names = c('age','sex','chest_pain_type','resting_bp','cholesterol',
 #'                        'high_blood_sugar','resting_ecg','max_heart_rate',
@@ -35,8 +35,8 @@ load_data <- function(path, names, separator = ",", na_values = "NAs") {
       delim = separator,
       show_col_types = FALSE,
       na = na_values
-    ) 
-  
+    )
+
   tidy_data <- new_data |>
     dplyr::mutate_if(is.character, as.factor)
 

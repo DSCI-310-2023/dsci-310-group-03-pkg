@@ -21,26 +21,26 @@
 
 build_model <- function(training_set, recipe, optimal, vfold, gridvals, k) {
   if (optimal == "None") {
-    knn_spec <- parsnip::nearest_neighbor(weight_func = "rectangular", neighbors = tune()) |>
+    knn_spec <- parsnip::nearest_neighbor(weight_func = "rectangular", neighbors = tune::tune()) |>
       parsnip::set_engine("kknn") |>
       parsnip::set_mode("classification")
-    
+
     knn_fit <- workflows::workflow() |>
       workflows::add_recipe(recipe) |>
       workflows::add_model(knn_spec) |>
       tune::tune_grid(resamples = {{ vfold }}, grid = {{ gridvals }}) |>
       tune::collect_metrics()
-    
+
   } else if (optimal == "Yes") {
-    
+
     knn_spec <- parsnip::nearest_neighbor(weight_func = "rectangular", neighbors = k) |>
       parsnip::set_engine("kknn") |>
       parsnip::set_mode("classification")
-    
+
     knn_fit <- workflows::workflow() |>
       workflows::add_recipe(recipe) |>
       workflows::add_model(knn_spec) |>
-      fit(data = {{ training_set }})
+      generics::fit(data = {{ training_set }})
   }
 
   return(knn_fit)

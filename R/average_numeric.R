@@ -5,8 +5,8 @@
 #' @param dataset the training set with a list of numerical attributes
 #' @param class_col the name for the column to group by
 #'
-#' @example
-#' avg_numeric(iris,Species)
+#''@example avg_numeric(iris,Species)
+#' @importFrom dplyr mutate
 
 avg_numeric <- function(dataset, class_col) {
 
