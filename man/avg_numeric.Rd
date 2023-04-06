@@ -11,7 +11,7 @@ avg_numeric(dataset, class_col)
 
 \item{class_col}{the name for the column to group by
 
-'@example avg_numeric(iris,Species)}
+'@examples avg_numeric(iris,Species)}
 }
 \description{
 Function to compare the mean values of the numerical attributes

@@ -47,12 +47,12 @@ histograms_ggplot <- cowplot::plot_grid(
   label_size = 10
 )
 
-plot_title <- cowplot::ggdraw() + 
-  cowplot::draw_label(title, fontface='bold')
+plot_title <- cowplot::ggdraw() +
+  cowplot::draw_label("Title", fontface='bold')
 
-histograms_ggplot_with_title <- 
+histograms_ggplot_with_title <-
   cowplot::plot_grid(plot_title,
-                     histograms_ggplot, 
+                     histograms_ggplot,
                      ncol = 1,
                      rel_heights = c(0.25, 1),
                      align = "vh")

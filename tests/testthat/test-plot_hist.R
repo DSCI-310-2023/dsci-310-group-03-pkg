@@ -1,5 +1,3 @@
-source("../../src/functions/plot_hist.R")
-
 testthat::test_that("ggplot2 histogram works", {
   vdiffr::expect_doppelganger("histograms from ggplot",
                               histograms_ggplot_with_title)

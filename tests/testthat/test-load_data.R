@@ -1,5 +1,3 @@
-source("../../src/functions/load_data.R")
-
 testthat::test_that("load_data returns a dataframe with same column names", {
   testthat::expect_equal(column_names, colnames(load_data(
     path,

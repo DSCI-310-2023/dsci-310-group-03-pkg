@@ -1,5 +1,3 @@
-source("../../src/functions/sub_values.R")
-
 testthat::test_that("Function return a vector with the same length", {
   testthat::expect_equal(
     length(Species_vec),
