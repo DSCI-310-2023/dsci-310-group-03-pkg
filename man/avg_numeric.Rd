@@ -2,7 +2,7 @@
 % Please edit documentation in R/average_numeric.R
 \name{avg_numeric}
 \alias{avg_numeric}
-\title{Compute averages of numeric factors}
+\title{Compute averages of numeric attributes}
 \usage{
 avg_numeric(dataset, class_col)
 }

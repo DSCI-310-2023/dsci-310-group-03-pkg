@@ -20,10 +20,15 @@ Imports:
     dplyr,
     generics,
     ggplot2,
+    kknn,
     parsnip,
     readr,
+    recipes,
     rlang (>= 0.4.11),
+    rsample,
+    tibble,
     tidyselect,
     tune,
+    vdiffr,
     workflows
 Config/testthat/edition: 3
