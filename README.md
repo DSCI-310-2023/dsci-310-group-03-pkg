@@ -71,7 +71,9 @@ More on the function parameters can be found in `build_model.R`
 
 ## Contributing
 
-Please read [here]() on how to contribute to the package.
+Please read
+[here](https://github.com/karlie-tr/dsci-310-group-03-pkg/blob/main/CONTRIBUTING.md)
+on how to contribute to the package.
 
 ## License
 
