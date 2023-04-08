@@ -4,17 +4,7 @@ name: R-CMD-check
 
 jobs:
   R-CMD-check:
-    runs-on: ${{ matrix.config.os }}
-
-    name: ${{ matrix.config.os }} (${{ matrix.config.r }})
-
-    strategy:
-      matrix:
-        config:
-          - {os: windows-latest,  r: 'devel'}
-          - {os: windows-latest, r: 'release'}
-          - {os: ubuntu-latest,   r: 'devel'}
-          - {os: ubuntu-latest,   r: 'release'}
+    runs-on: ubuntu-latest
     
     steps:
       - name: Checkout files from GitHub version control repository
