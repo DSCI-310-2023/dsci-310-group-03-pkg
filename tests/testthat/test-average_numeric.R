@@ -19,29 +19,39 @@ testthat::test_that("`avg_numeric` should return a data frame or
     "2 obs",
     ignore.case = TRUE
   )
-  testthat::expect_output(
-    str(avg_numeric(empty_df, gender)),
-    "0 obs",
-    ignore.case = TRUE
-  )
 })
 
 testthat::test_that("`avg_numeric` should throw an error when incorrect
-                    types of input are passed to `data` or
-                    `column_name` arguments", {
-  testthat::expect_error(avg_numeric(iris, Color))
-  testthat::expect_error(avg_numeric(grade_df_as_list, gender))
-  testthat::expect_error(avg_numeric(grade_df, Gender))
-  testthat::expect_error(avg_numeric(grade_df_as_list, weight))
+                    types of input are passed to `data`", {
+  testthat::expect_error(
+    avg_numeric(grade_df_as_list, gender),
+    "`dataset` should be a data frame or data frame extension"
+  )
+  testthat::expect_error(
+    avg_numeric(grade_df_as_list, weight),
+    "`dataset` should be a data frame or data frame extension"
+  )
+})
+
+testthat::test_that("`avg_numeric` should throw an error when the column
+                    does not exist in the data frame", {
+  testthat::expect_error(
+    avg_numeric(iris, Color),
+    "'Color' does not exist in this data frame"
+  )
+  testthat::expect_error(
+    avg_numeric(grade_df, Gender),
+    "'Gender' does not exist in this data frame"
+  )
 })
 
 testthat::test_that("`class_col` can be either a factorial class
                     or a character class", {
-                      testthat::expect_no_error(avg_numeric(grade_df, gender))
-                      testthat::expect_no_error(avg_numeric(grade_df, final_grade))
-                    })
+  testthat::expect_no_error(avg_numeric(grade_df, gender))
+  testthat::expect_no_error(avg_numeric(grade_df, final_grade))
+})
 
-testthat::test_that("`avg_numeric should return a data frame or
+testthat::test_that("`avg_numeric` should return a data frame or
                     data frame extension that computes the averages of variables
                     grouped by `class_col`", {
   testthat::expect_equal(

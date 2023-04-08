@@ -4,7 +4,7 @@
 \alias{load_data}
 \title{Create a tidied data frame}
 \usage{
-load_data(path, names, separator = ",", na_values = "NAs")
+load_data(path, names = TRUE, separator = ",", na_values = "NAs")
 }
 \arguments{
 \item{path}{A single string or a vector of the path to raw file}
@@ -26,13 +26,6 @@ names = c('age','sex','chest_pain_type','resting_bp','cholesterol',
 'thal','diagnosis','diagnosis_2'),
 separator = ",",
 na_values = "?")
-
-load_data("data/raw/heart_disease_data.csv",
-c('age','sex','chest_pain_type','resting_bp','cholesterol',
-'high_blood_sugar','resting_ecg',
-'max_heart_rate','exercise_pain','old_peak','slope',
-'no_vessels_colored','thal',
-'diagnosis','diagnosis_2'))
 }
 \description{
 Reading in a data frame and change column types from characters to

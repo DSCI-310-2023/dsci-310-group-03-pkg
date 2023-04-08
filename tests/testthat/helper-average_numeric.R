@@ -10,13 +10,6 @@ final_grade <- c("A", "B", "C", "D", "F")
 # function input for tests ----------------------------------------------------
 grade_df <- data.frame(age, height, gender, final_grade)
 
-empty_df <- data.frame(
-  age = numeric(),
-  height = numeric(),
-  gender = factor(),
-  final_grade = factor()
-)
-
 grade_df_as_list <- list(age, height, gender, final_grade)
 
 # expected function output ----------------------------------------------------

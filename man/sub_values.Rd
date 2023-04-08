@@ -4,10 +4,10 @@
 \alias{sub_values}
 \title{Replace values in a specified column}
 \usage{
-sub_values(data, column, replacement, original)
+sub_values(dataset, column, replacement, original)
 }
 \arguments{
-\item{data}{a data frame}
+\item{dataset}{a data frame}
 
 \item{column}{a column that exists within the data frame}
 
@@ -16,11 +16,12 @@ sub_values(data, column, replacement, original)
 \item{original}{a string}
 }
 \value{
-the new column with the replaced values
-
-' @example
-sub_values(iris, Species, 'replaced_Setosa', 'setosa')
+A vector of the new column with the replaced values
 }
 \description{
 Replace values in a specified column
+}
+\examples{
+ sub_values(iris, Species, 'replaced_Setosa', 'setosa')
+
 }

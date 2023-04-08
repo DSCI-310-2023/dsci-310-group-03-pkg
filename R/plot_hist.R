@@ -7,16 +7,18 @@
 #' @param bins a number that indicates
 #'             the number of bins in histograms
 #' @param col the number of columns when arranging the plots
-#' @param sep the character that is seperating the column names
+#' @param sep the character that is separating the column names
 #' @param title a string that indicates the plot title
 #'
 #' @return A histogram of all numeric variables that is
 #'         grouped by the class_Column
 #'
-#'' @example
-#' plot_hist(iris, Species, title = "Histogram")
-#' plot_hist(iris, Species, binwidth = 0.25, col = 3, title = "Histogram")
+#' @examples
+#'   plot_hist(iris, Species, title = "Histogram")
+#'   plot_hist(iris, Species, bins = 0.25, col = 3, title = "Histogram")
+#'
 #' @importFrom tidyselect any_of
+#'
 #' @export
 
 plot_hist <- function(data,
@@ -38,7 +40,7 @@ plot_hist <- function(data,
     dplyr::select_if(is.numeric) |>
     colnames()
 
-  # Create a dataframe with only numeric columns and class_column
+  # Create a data frame with only numeric columns and class_column
   numeric_df <- data |>
     dplyr::select(any_of(numeric_col), {{ class_column }}) |>
     as.data.frame()

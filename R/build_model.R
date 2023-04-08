@@ -13,11 +13,17 @@
 #'
 #' @return a fitted knn model
 #'
-#'' @example build_model(image_recipe, NULL)
+#' @examples
+#' \dontrun{
+#' image_recipe <- recipes::recipe(Species ~ ., data = iris) |>
+#'   recipes::step_scale(all_predictors()) |>
+#'   recipes::step_center(all_predictors())
+#'
+#'  build_model(iris, image_recipe, "Yes", k = 10)
+#' }
 #'
 #' @export
-#'
-#
+
 
 build_model <- function(training_set, recipe, optimal, vfold, gridvals, k) {
   if (optimal == "None") {

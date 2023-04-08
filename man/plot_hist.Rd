@@ -11,7 +11,7 @@ plot_hist(data, class_column, sep = ".", bins = 20, col = 2, title)
 
 \item{class_column}{the groups that we are going to grouped the variables by}
 
-\item{sep}{the character that is seperating the column names}
+\item{sep}{the character that is separating the column names}
 
 \item{bins}{a number that indicates
 the number of bins in histograms}
@@ -23,11 +23,12 @@ the number of bins in histograms}
 \value{
 A histogram of all numeric variables that is
 grouped by the class_Column
-
-' @example
-plot_hist(iris, Species, title = "Histogram")
-plot_hist(iris, Species, binwidth = 0.25, col = 3, title = "Histogram")
 }
 \description{
 Create a general function to remove repetitive ggplot functions
+}
+\examples{
+  plot_hist(iris, Species, title = "Histogram")
+  plot_hist(iris, Species, bins = 0.25, col = 3, title = "Histogram")
+
 }

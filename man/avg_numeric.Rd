@@ -9,10 +9,15 @@ avg_numeric(dataset, class_col)
 \arguments{
 \item{dataset}{the training set with a list of numerical attributes}
 
-\item{class_col}{the name for the column to group by
-
-'@example avg_numeric(iris,Species)}
+\item{class_col}{the name for the column to group by}
+}
+\value{
+A data frame that contains the mean values of all numerical variables
 }
 \description{
 Function to compare the mean values of the numerical attributes
+}
+\examples{
+avg_numeric(iris,Species)
+
 }

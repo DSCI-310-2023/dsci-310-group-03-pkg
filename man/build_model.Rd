@@ -23,9 +23,17 @@ optimal neighbors for the model}
 }
 \value{
 a fitted knn model
-
-' @example build_model(image_recipe, NULL)
 }
 \description{
 Function build_model() to build knn model with cross validation
+}
+\examples{
+\dontrun{
+image_recipe <- recipes::recipe(Species ~ ., data = iris) |>
+  recipes::step_scale(all_predictors()) |>
+  recipes::step_center(all_predictors())
+
+ build_model(iris, image_recipe, "Yes", k = 10)
+}
+
 }
