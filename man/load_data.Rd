@@ -18,7 +18,7 @@ load_data(path, names, separator = ",", na_values = "NAs")
 \value{
 a new tidied data frame with appropriate columns type
 
-'@examples
+'@example
 load_data("data/raw/heart_disease_data.csv",
 names = c('age','sex','chest_pain_type','resting_bp','cholesterol',
 'high_blood_sugar','resting_ecg','max_heart_rate',

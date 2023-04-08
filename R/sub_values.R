@@ -7,7 +7,7 @@
 #'
 #' @return the new column with the replaced values
 #'
-#' @example
+#'' @example
 #'  sub_values(iris, Species, 'replaced_Setosa', 'setosa')
 
 sub_values <- function(data, column, replacement, original) {

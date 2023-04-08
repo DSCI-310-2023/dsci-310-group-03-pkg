@@ -1,4 +1,4 @@
-#' Compute averages of numeric factors
+#' Compute averages of numeric attributes
 #'
 #' Function to compare the mean values of the numerical attributes
 #'

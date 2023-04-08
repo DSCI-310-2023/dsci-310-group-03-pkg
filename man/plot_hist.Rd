@@ -24,7 +24,7 @@ the number of bins in histograms}
 A histogram of all numeric variables that is
 grouped by the class_Column
 
-' @examples
+' @example
 plot_hist(iris, Species, title = "Histogram")
 plot_hist(iris, Species, binwidth = 0.25, col = 3, title = "Histogram")
 }

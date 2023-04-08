@@ -17,10 +17,10 @@ sub_values(data, column, replacement, original)
 }
 \value{
 the new column with the replaced values
+
+' @example
+sub_values(iris, Species, 'replaced_Setosa', 'setosa')
 }
 \description{
 Replace values in a specified column
-}
-\examples{
- sub_values(iris, Species, 'replaced_Setosa', 'setosa')
 }
