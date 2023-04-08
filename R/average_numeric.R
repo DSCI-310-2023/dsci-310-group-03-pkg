@@ -28,10 +28,9 @@ avg_numeric <- function(dataset, class_col) {
                sep = ""))
   }
 
-  if (is.character(dataset$class_col)) {
-    new_dataset <- dataset |>
+  new_dataset <- dataset |>
       mutate({{ class_col }} := as.factor({{ class_col }}))
-  }
+
   new_dataset <- dataset
   summary_averages <- dataset |>
     dplyr::group_by({{ class_col }}) |>

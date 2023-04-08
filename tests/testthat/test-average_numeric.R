@@ -45,10 +45,11 @@ testthat::test_that("`avg_numeric` should throw an error when the column
   )
 })
 
-testthat::test_that("`class_col` can be either a factorial class
+testthat::test_that("`class_col` can be either a double class, a factorial class
                     or a character class", {
   testthat::expect_no_error(avg_numeric(grade_df, gender))
   testthat::expect_no_error(avg_numeric(grade_df, final_grade))
+  testthat::expect_no_error(avg_numeric(grade_df, age))
 })
 
 testthat::test_that("`avg_numeric` should return a data frame or

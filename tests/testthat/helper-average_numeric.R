@@ -24,3 +24,10 @@ grouped_by_grades_output <- grade_df |>
   dplyr::select_if(is.numeric) |>
   dplyr::summarize_all(mean, na = TRUE)|>
   as.data.frame()
+
+grouped_by_age_output <- grade_df |>
+  dplyr::mutate(age = as.factor(age)) |>
+  dplyr::group_by(age) |>
+  dplyr::select_if(is.numeric) |>
+  dplyr::summarize_all(mean, na = TRUE)|>
+  as.data.frame()
