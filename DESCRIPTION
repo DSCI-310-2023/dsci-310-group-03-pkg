@@ -1,0 +1,34 @@
+Package: group03package
+Title: Provide functions to run data analysis for group 3 DSCI 310 project
+Version: 1.0.0
+Authors@R: 
+    c(person("Kaylie", "Nguyen", , "anhndq01@student.ubc.ca", role = c("aut","cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID")),
+      person("Karlie","Truong", role = c("aut")),
+      person("Hanzhang","Cao", role = c("aut")),
+      person("Ser Jie","Ng", role = c("aut")))
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Suggests: 
+    roxygen2,
+    testthat (>= 3.0.0)
+Imports: 
+    cowplot,
+    dplyr,
+    generics,
+    ggplot2,
+    kknn,
+    parsnip,
+    readr,
+    recipes,
+    rlang (>= 0.4.11),
+    rsample,
+    tibble,
+    tidyselect,
+    tune,
+    vdiffr,
+    workflows
+Config/testthat/edition: 3
