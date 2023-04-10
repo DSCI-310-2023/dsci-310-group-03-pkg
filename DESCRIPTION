@@ -32,3 +32,4 @@ Imports:
     tune,
     workflows
 Config/testthat/edition: 3
+URL: https://karlie-tr.github.io/dsci-310-group-03-pkg/
