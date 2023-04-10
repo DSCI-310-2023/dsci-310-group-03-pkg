@@ -10,8 +10,6 @@
 #' @examples
 #'  sub_values(iris, Species, 'replaced_Setosa', 'setosa')
 #'
-#' @importFrom dplyr mutate
-#'
 #' @export
 
 

@@ -27,6 +27,7 @@
 
 build_model <- function(training_set, recipe, optimal, vfold, gridvals, k) {
   if (optimal == "None") {
+
     knn_spec <- parsnip::nearest_neighbor(weight_func = "rectangular", neighbors = tune::tune()) |>
       parsnip::set_engine("kknn") |>
       parsnip::set_mode("classification")
