@@ -4,6 +4,8 @@
 # group03package
 
 <!-- badges: start -->
+[![test-coverage](https://github.com/karlie-tr/dsci-310-group-03-pkg/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/karlie-tr/dsci-310-group-03-pkg/actions/workflows/test-coverage.yaml)
+[![codecov](https://codecov.io/gh/karlie-tr/dsci-310-group-03-pkg/branch/add-covr-badge/graph/badge.svg?token=4OJHZH6BST)](https://codecov.io/gh/karlie-tr/dsci-310-group-03-pkg)
 <!-- badges: end -->
 
 The goal of group03package is to provide functions that will run our the
