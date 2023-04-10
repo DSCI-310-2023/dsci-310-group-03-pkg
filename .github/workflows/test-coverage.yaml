@@ -4,6 +4,8 @@ on:
   push:
     paths: 
       - 'tests/testthat/**' 
+    branches:
+      - 'add-covr-badge'
   pull_request:
      paths: 
       - 'tests/testthat/**' 
