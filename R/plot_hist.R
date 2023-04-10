@@ -17,8 +17,6 @@
 #'   plot_hist(iris, Species, title = "Histogram")
 #'   plot_hist(iris, Species, bins = 0.25, col = 3, title = "Histogram")
 #'
-#' @importFrom tidyselect any_of
-#'
 #' @export
 
 plot_hist <- function(data,
@@ -46,7 +44,7 @@ plot_hist <- function(data,
 
   # Create a data frame with only numeric columns and class_column
   numeric_df <- data |>
-    dplyr::select(any_of(numeric_col), {{ class_column }}) |>
+    dplyr::select(dplyr::any_of(numeric_col), {{ class_column }}) |>
     as.data.frame()
 
   # Generate a plot for each variable that is numeric
