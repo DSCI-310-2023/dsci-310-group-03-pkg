@@ -39,5 +39,3 @@ vignettes/*.pdf
 .Renviron
 .Rproj.user
 
-# Workflow
-docs

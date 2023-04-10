@@ -10,8 +10,3 @@ data_from_read_delim <- readr::read_delim(
   na = "NA"
   ) |>
   dplyr::mutate(country = as.factor(country))
-
-
-
-
-
