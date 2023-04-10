@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/404.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/404.html</loc>
   </url>
   <url>
-    <loc>/CODE_OF_CONDUCT.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>/CONTRIBUTING.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>/LICENSE-text.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>/authors.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/authors.html</loc>
   </url>
   <url>
-    <loc>/index.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/index.html</loc>
   </url>
   <url>
-    <loc>/reference/avg_numeric.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/reference/avg_numeric.html</loc>
   </url>
   <url>
-    <loc>/reference/build_model.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/reference/build_model.html</loc>
   </url>
   <url>
-    <loc>/reference/index.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/reference/index.html</loc>
   </url>
   <url>
-    <loc>/reference/load_data.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/reference/load_data.html</loc>
   </url>
   <url>
-    <loc>/reference/plot_hist.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/reference/plot_hist.html</loc>
   </url>
   <url>
-    <loc>/reference/sub_values.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/reference/sub_values.html</loc>
   </url>
   <url>
-    <loc>/reference/tidyeval.html</loc>
+    <loc>https://karlie-tr.github.io/dsci-310-group-03-pkg/reference/tidyeval.html</loc>
   </url>
 </urlset>
