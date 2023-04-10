@@ -9,8 +9,6 @@
 #'
 #' @examples avg_numeric(iris,Species)
 #'
-#' @importFrom dplyr mutate
-#'
 #' @export
 
 avg_numeric <- function(dataset, class_col) {
@@ -29,7 +27,7 @@ avg_numeric <- function(dataset, class_col) {
   }
 
   new_dataset <- dataset |>
-      mutate({{ class_col }} := as.factor({{ class_col }}))
+    dplyr::mutate({{ class_col }} := as.factor({{ class_col }}))
 
   new_dataset <- dataset
   summary_averages <- dataset |>
