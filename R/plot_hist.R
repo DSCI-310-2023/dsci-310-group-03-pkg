@@ -32,13 +32,17 @@ plot_hist <- function(data,
     stop("`title` should be a string")
   }
 
-  # Create a new empty list
-  plots <- list()
-
   # Determine columns that is numeric
   numeric_col <- data |>
     dplyr::select_if(is.numeric) |>
     colnames()
+
+  if (length(numeric_col) <= 0) {
+    stop("`data` only have categorical variables")
+  }
+
+  # Create a new empty list
+    plots <- list()
 
   # Create a data frame with only numeric columns and class_column
   numeric_df <- data |>
@@ -52,6 +56,7 @@ plot_hist <- function(data,
       {{ class_column }}
     )
 
+    # create histograms of each variable then add it to list of plots
     plots[[i]] <- local({
       i <- i
       histogram <- data |>
@@ -76,9 +81,11 @@ plot_hist <- function(data,
     })
   }
 
- plot_title <- cowplot::ggdraw() +
-   cowplot::draw_label(title, fontface = "bold")
+  # create the plot title object
+  plot_title <- cowplot::ggdraw() +
+     cowplot::draw_label(title, fontface = "bold")
 
+  # add create the list of plots and label them
   p <- cowplot::plot_grid(plotlist = plots,
                      ncol = col,
                      labels = "auto",
