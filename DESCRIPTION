@@ -14,21 +14,21 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Suggests: 
     roxygen2,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    covr,
+    vdiffr,
+    kknn,
+    recipes,
+    rsample,
+    tibble
 Imports: 
     cowplot,
     dplyr,
     generics,
     ggplot2,
-    kknn,
     parsnip,
     readr,
-    recipes,
     rlang (>= 0.4.11),
-    rsample,
-    tibble,
-    tidyselect,
     tune,
-    vdiffr,
     workflows
 Config/testthat/edition: 3

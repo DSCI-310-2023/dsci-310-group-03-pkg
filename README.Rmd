@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # group03package
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/karlie-tr/dsci-310-group-03-pkg/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/karlie-tr/dsci-310-group-03-pkg/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of group03package is to provide functions that will run our the analysis for our project in DSCI 310 smoothly. This include loading data, computing averages for numeric variables and plotting histograms for EDA, converting character columns into factor and building knn model.
