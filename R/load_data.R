@@ -10,14 +10,9 @@
 #'
 #' @return a new tidied data frame with appropriate columns type
 #'
-#''@example
-#'  load_data("data/raw/heart_disease_data.csv",
-#'             names = c('age','sex','chest_pain_type','resting_bp','cholesterol',
-#'                        'high_blood_sugar','resting_ecg','max_heart_rate',
-#'                        'exercise_pain','old_peak','slope','no_vessels_colored',
-#'                        'thal','diagnosis','diagnosis_2'),
-#'             separator = ",",
-#'             na_values = "?")
+#' @examples
+#'   load_data(readr::readr_example("mini-gapminder-asia.csv"))
+#'
 #' @export
 
 load_data <- function(path,
