@@ -1,0 +1,64 @@
+---
+title: "Introduction to group03package"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{group30package-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(group03package)
+```
+When building a knn model, there are a few steps that you must go through:
+* Load the dataset of interest
+* Perform EDA to gain an overview of the data (through numeric summaries as well as visualizations)
+* Clean the dataset so that attributes are in appropriate types for model building
+* Build the actual model
+
+## Data
+We will first use the dataset iris for this tutorial. We will skip over the `load_data()` function in this package as it's used to specific datasets that require more cleaning to parse. For reference, we can use load_data() with other datasets such as follow:
+```{r}
+load_data(readr::readr_example("mini-gapminder-asia.csv"))
+```
+Now we will load the iris dataset that will be used to demo other functions.
+```{r}
+head(iris)
+```
+## EDA
+### Means of numeric values with `avg_numeric()`
+To study the numeric attributes of the dataset, grouped by a categorical attribute of interest, such as the species, we can use the function `avg_numeric()`.
+```{r}
+avg_numeric(iris,Species)
+```
+The function output the mean for the numeric attributes such as sepal length or sepal width for each of the iris species we have.
+
+### Plotting histograms with `plot_hist()`
+We can also visualize the distribution of the numerical attributes by using the `plot_hist()` function. The histogram will also be grouped by the Species to visualize the differences or similaries between each the distribution for each category. We will now plot the histogram for the species to see how many observations of each species we have in the dataset.
+```{r}
+plot_hist(iris, Species, title = "Histogram")
+```
+## Data cleaning
+If certain attributes are categorical while we want to fit a knn model using those attributes, we may have to encode the categories of that attribute into numerical values or any value appropriate for the model. Since this dataset does not have any attribute that need to be encoded, we'll substitute the "setosa" species by "replaced_Setosa" just for the purpose of demonstration.
+```{r }
+sub_values(iris, Species, 'replaced_Setosa', 'setosa')
+```
+## Knn Model
+We'll now move on to the last step which is building our model. We want to predict the species based on all other numeric attributes.
+```{r}
+recipe <- recipes::recipe(Species ~ ., data = iris)
+```
+We will build the model with the specified number of neighbors k = 10. However, you can also choose to build the model with cross validation and pass on a grid of values for model optimization, from which you can pick the most optimal k.
+```{r}
+build_model(iris, recipe, "Yes", k = 10)
+```
+## Conclusion
+From the model, you can choose to scale the attributes, to perform cross validation or parameter optimization. You can also use the model on your test set and check for the accuracy and other metrics. Our package provides a shortened way to build the model of the same nature as our project analysis.
+You can refer to [our project](https://github.com/karlie-tr/dsci-310-group-03) to see how the functions are used in the actual analysis.

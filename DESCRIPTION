@@ -20,7 +20,9 @@ Suggests:
     kknn,
     recipes,
     rsample,
-    tibble
+    tibble,
+    knitr,
+    rmarkdown
 Imports: 
     cowplot,
     dplyr,
@@ -32,3 +34,4 @@ Imports:
     tune,
     workflows
 Config/testthat/edition: 3
+VignetteBuilder: knitr
