@@ -2,8 +2,7 @@ Package: group03package
 Title: Provide functions to run data analysis for group 3 DSCI 310 project
 Version: 1.0.0
 Authors@R: 
-    c(person("Kaylie", "Nguyen", , "anhndq01@student.ubc.ca", role = c("aut","cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID")),
+    c(person("Kaylie", "Nguyen", , "anhndq01@student.ubc.ca", role = c("aut","cre")),
       person("Karlie","Truong", role = c("aut")),
       person("Hanzhang","Cao", role = c("aut")),
       person("Ser Jie","Ng", role = c("aut")))
@@ -20,7 +19,9 @@ Suggests:
     kknn,
     recipes,
     rsample,
-    tibble
+    tibble,
+    knitr,
+    rmarkdown
 Imports: 
     cowplot,
     dplyr,
@@ -30,5 +31,7 @@ Imports:
     readr,
     rlang (>= 0.4.11),
     tune,
-    workflows
+    workflows,
+    devtools
 Config/testthat/edition: 3
+VignetteBuilder: knitr
