@@ -21,7 +21,8 @@ Suggests:
     rsample,
     tibble,
     knitr,
-    rmarkdown
+    rmarkdown,
+    pandoc
 Imports: 
     cowplot,
     dplyr,
