@@ -21,7 +21,7 @@ You can install the development version of group03package from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("karlie-tr/dsci-310-group-03-pkg")
+devtools::install_github("DSCI-310/dsci-310-group-03-pkg")
 ```
 
 ## Usage
