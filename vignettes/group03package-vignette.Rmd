@@ -14,7 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+```{r setup, message = FALSE}
+devtools::install_github("karlie-tr/dsci-310-group-03-pkg")
 library(group03package)
 ```
 When building a knn model, there are a few steps that you must go through:
@@ -50,7 +51,7 @@ If certain attributes are categorical while we want to fit a knn model using tho
 ```{r }
 sub_values(iris, Species, 'replaced_Setosa', 'setosa')
 ```
-## Knn Model
+## KNN Model
 We'll now move on to the last step which is building our model. We want to predict the species based on all other numeric attributes.
 ```{r}
 recipe <- recipes::recipe(Species ~ ., data = iris)
