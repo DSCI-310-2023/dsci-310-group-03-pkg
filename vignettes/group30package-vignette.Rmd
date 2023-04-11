@@ -2,7 +2,7 @@
 title: "Introduction to group03package"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{group30package-vignette}
+  %\VignetteIndexEntry{Introduction to group03package}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
