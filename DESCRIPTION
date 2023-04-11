@@ -27,11 +27,10 @@ Imports:
     dplyr,
     generics,
     ggplot2,
-    pandoc,
     parsnip,
     readr,
     rlang (>= 0.4.11),
     tune,
     workflows
 Config/testthat/edition: 3
-VignetteBuilder: knitr, rmarkdown
+VignetteBuilder: knitr
