@@ -15,7 +15,6 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup, message = FALSE}
-devtools::install_github("karlie-tr/dsci-310-group-03-pkg")
 library(group03package)
 ```
 When building a knn model, there are a few steps that you must go through:
