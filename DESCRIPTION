@@ -21,13 +21,13 @@ Suggests:
     rsample,
     tibble,
     knitr,
-    rmarkdown,
-    pandoc
+    rmarkdown
 Imports: 
     cowplot,
     dplyr,
     generics,
     ggplot2,
+    pandoc,
     parsnip,
     readr,
     rlang (>= 0.4.11),
